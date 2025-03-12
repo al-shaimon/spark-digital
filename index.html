@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spark Digital - Marketing Solutions</title>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310b981'%3E%3Cpath d='M13 10V3L4 14h7v7l9-11h-7z'/%3E%3C/svg%3E"
+    />
+    <meta name="theme-color" content="#10b981" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- DevIcon for programming language icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+    <!-- Font Awesome for general icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- Custom tailwind config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                light: '#34d399',
+                DEFAULT: '#10b981',
+                dark: '#059669',
+              },
+              secondary: {
+                DEFAULT: '#0f172a',
+                dark: '#0a0f1c',
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-sans">
+    <!-- Navigation Bar -->
+    <nav class="bg-secondary p-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center">
+          <i class="fa-solid fa-bolt text-primary-light text-2xl"></i>
+          <span class="ml-2 text-white font-bold text-xl">SPARK DIGITAL</span>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex space-x-8">
+          <a href="#what-we-do" class="text-white hover:text-primary-light transition"
+            >What we do</a
+          >
+          <a href="#how-we-work" class="text-white hover:text-primary-light transition"
+            >How we work</a
+          >
+          <a href="#pricing" class="text-white hover:text-primary-light transition">Pricing</a>
+          <a href="#our-team" class="text-white hover:text-primary-light transition">Our Team</a>
+        </div>
+
+        <a
+          href="#github-profile"
+          class="hidden md:block bg-primary hover:bg-primary-dark text-white font-semibold py-2 px-6 rounded-full transition"
+        >
+          Contact Us
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-white" id="mobile-menu-button">
+          <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu (hidden by default) -->
+      <div class="md:hidden hidden" id="mobile-menu">
+        <div class="container mx-auto px-4 py-3 space-y-3">
+          <a href="#what-we-do" class="block text-white hover:text-primary-light">What we do</a>
+          <a href="#how-we-work" class="block text-white hover:text-primary-light">How we work</a>
+          <a href="#pricing" class="block text-white hover:text-primary-light">Pricing</a>
+          <a href="#our-team" class="block text-white hover:text-primary-light">Our Team</a>
+          <a href="#github-profile" class="block text-white hover:text-primary-light">Contact Us</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section with Simple Sliding Banner -->
+    <div
+      class="relative overflow-hidden bg-gradient-to-r from-secondary to-primary"
+      id="hero-banner"
+    >
+      <!-- Sliding banners -->
+      <div class="banner-slides">
+        <!-- Slide 1 -->
+        <div class="banner-slide relative h-screen md:h-[600px]" id="slide-0">
+          <!-- Background image with overlay -->
+          <div class="absolute inset-0 opacity-20">
+            <img
+              src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2940&auto=format&fit=crop"
+              class="w-full h-full object-cover"
+              alt="Digital marketing strategy background"
+            />
+          </div>
+
+          <div
+            class="container mx-auto px-6 py-24 md:py-32 flex flex-col md:flex-row items-center relative z-10"
+          >
+            <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+              <div class="mb-2">
+                <h2 class="text-primary-light text-2xl font-bold">Grow Your Brand</h2>
+              </div>
+              <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                Digital Marketing Solutions
+              </h1>
+              <p class="text-white text-lg md:text-xl mb-8 max-w-lg">
+                Elevate your online presence with data-driven strategies that convert visitors into
+                loyal customers.
+              </p>
+              <a
+                href="#github-profile"
+                class="inline-block bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-8 rounded-full transition"
+              >
+                START A PROJECT TODAY
+              </a>
+            </div>
+
+            <div class="md:w-1/2">
+              <div class="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2940&auto=format&fit=crop"
+                  alt="Marketing Team"
+                  class="rounded-lg shadow-2xl mx-auto"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="banner-slide relative h-screen md:h-[600px] hidden" id="slide-1">
+          <!-- Background image with overlay -->
+          <div class="absolute inset-0 opacity-20">
+            <img
+              src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=2940&auto=format&fit=crop"
+              class="w-full h-full object-cover"
+              alt="Marketing background"
+            />
+          </div>
+
+          <div
+            class="container mx-auto px-6 py-24 md:py-32 flex flex-col md:flex-row items-center relative z-10"
+          >
+            <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+              <div class="mb-2">
+                <h2 class="text-primary-light text-2xl font-bold">Engage Your Audience</h2>
+              </div>
+              <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                Social Media Management
+              </h1>
+              <p class="text-white text-lg md:text-xl mb-8 max-w-lg">
+                Build meaningful connections with your audience across all major social platforms.
+              </p>
+              <a
+                href="#github-profile"
+                class="inline-block bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-8 rounded-full transition"
+              >
+                START A PROJECT TODAY
+              </a>
+            </div>
+
+            <div class="md:w-1/2">
+              <div class="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1611605698335-8b1569810432?q=80&w=2940&auto=format&fit=crop"
+                  alt="Social Media Team"
+                  class="rounded-lg shadow-2xl mx-auto"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="banner-slide relative h-screen md:h-[600px] hidden" id="slide-2">
+          <!-- Background image with overlay -->
+          <div class="absolute inset-0 opacity-20">
+            <img
+              src="https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=2940&auto=format&fit=crop"
+              class="w-full h-full object-cover"
+              alt="SEO background"
+            />
+          </div>
+
+          <div
+            class="container mx-auto px-6 py-24 md:py-32 flex flex-col md:flex-row items-center relative z-10"
+          >
+            <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+              <div class="mb-2">
+                <h2 class="text-primary-light text-2xl font-bold">Be Discovered</h2>
+              </div>
+              <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">SEO Optimization</h1>
+              <p class="text-white text-lg md:text-xl mb-8 max-w-lg">
+                Rank higher in search results and drive organic traffic to your website.
+              </p>
+              <a
+                href="#github-profile"
+                class="inline-block bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-8 rounded-full transition"
+              >
+                START A PROJECT TODAY
+              </a>
+            </div>
+
+            <div class="md:w-1/2">
+              <div class="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"
+                  alt="SEO Analytics"
+                  class="rounded-lg shadow-2xl mx-auto"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation arrows -->
+      <button
+        id="prev-btn"
+        class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/30 hover:bg-white/50 rounded-full w-10 h-10 flex items-center justify-center text-white z-20"
+      >
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button
+        id="next-btn"
+        class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/30 hover:bg-white/50 rounded-full w-10 h-10 flex items-center justify-center text-white z-20"
+      >
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+      <!-- Dots indicator -->
+      <div
+        class="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20"
+        id="banner-dots"
+      >
+        <button
+          class="w-3 h-3 rounded-full bg-primary transition-colors"
+          onclick="showSlide(0)"
+        ></button>
+        <button
+          class="w-3 h-3 rounded-full bg-white/50 transition-colors"
+          onclick="showSlide(1)"
+        ></button>
+        <button
+          class="w-3 h-3 rounded-full bg-white/50 transition-colors"
+          onclick="showSlide(2)"
+        ></button>
+      </div>
+    </div>
+
+    <!-- Trusted Clients Section -->
+    <section class="py-16 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <h3 class="text-center text-gray-500 font-medium mb-10">Trusted By The Best Clients</h3>
+        <div
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center"
+        >
+          <!-- Client logos with real images -->
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png"
+            alt="Google"
+            class="h-8"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1920px-Netflix_2015_logo.svg.png"
+            alt="Netflix"
+            class="h-8"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png"
+            alt="Amazon"
+            class="h-8"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1667px-Apple_logo_black.svg.png"
+            alt="Apple"
+            class="h-10"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/1024px-Spotify_logo_without_text.svg.png"
+            alt="Spotify"
+            class="h-8"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Slack_Technologies_Logo.svg"
+            alt="Slack"
+            class="h-8"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section id="what-we-do" class="py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-16 text-gray-800">What We Do</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div
+            class="text-center mb-8 bg-white p-8 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105 transform"
+          >
+            <div class="inline-block p-4 rounded-full bg-primary/10 mb-4">
+              <i class="fa-solid fa-paint-brush text-4xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Interface Design</h3>
+            <p class="text-gray-600">
+              We craft beautiful, intuitive interfaces that enhance user experience and drive
+              engagement.
+            </p>
+          </div>
+
+          <!-- Service 2 -->
+          <div
+            class="text-center mb-8 bg-white p-8 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105 transform"
+          >
+            <div class="inline-block p-4 rounded-full bg-primary/10 mb-4">
+              <i class="fa-solid fa-globe text-4xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Web Application</h3>
+            <p class="text-gray-600">
+              From concept to deployment, we build robust web applications that solve real business
+              problems.
+            </p>
+          </div>
+
+          <!-- Service 3 -->
+          <div
+            class="text-center mb-8 bg-white p-8 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105 transform"
+          >
+            <div class="inline-block p-4 rounded-full bg-primary/10 mb-4">
+              <i class="fa-solid fa-code text-4xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Software Development</h3>
+            <p class="text-gray-600">
+              Custom software solutions designed to optimize your business operations and increase
+              efficiency.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How We Work Section -->
+    <section id="how-we-work" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-16 text-gray-800">How We Work</h2>
+
+        <div class="flex flex-col md:flex-row flex-wrap justify-center">
+          <!-- Step 1 -->
+          <div
+            class="w-full md:w-1/5 px-4 mb-12 flex flex-col items-center transition-all duration-300 hover:scale-110 transform"
+          >
+            <div
+              class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4 shadow-lg"
+            >
+              <span class="text-white text-2xl font-bold">1</span>
+            </div>
+            <div class="h-12 w-1 bg-primary my-2 hidden md:block"></div>
+            <h3 class="text-xl font-bold text-center mb-2">Discovery</h3>
+            <p class="text-gray-600 text-center">
+              We learn about your business, goals, and challenges through in-depth consultation.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div
+            class="w-full md:w-1/5 px-4 mb-12 flex flex-col items-center transition-all duration-300 hover:scale-110 transform"
+          >
+            <div
+              class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4 shadow-lg"
+            >
+              <span class="text-white text-2xl font-bold">2</span>
+            </div>
+            <div class="h-12 w-1 bg-primary my-2 hidden md:block"></div>
+            <h3 class="text-xl font-bold text-center mb-2">Strategy</h3>
+            <p class="text-gray-600 text-center">
+              We develop a customized digital marketing plan tailored to your specific needs.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div
+            class="w-full md:w-1/5 px-4 mb-12 flex flex-col items-center transition-all duration-300 hover:scale-110 transform"
+          >
+            <div
+              class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4 shadow-lg"
+            >
+              <span class="text-white text-2xl font-bold">3</span>
+            </div>
+            <div class="h-12 w-1 bg-primary my-2 hidden md:block"></div>
+            <h3 class="text-xl font-bold text-center mb-2">Execution</h3>
+            <p class="text-gray-600 text-center">
+              Our team implements the strategy with attention to detail and creative excellence.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div
+            class="w-full md:w-1/5 px-4 mb-12 flex flex-col items-center transition-all duration-300 hover:scale-110 transform"
+          >
+            <div
+              class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4 shadow-lg"
+            >
+              <span class="text-white text-2xl font-bold">4</span>
+            </div>
+            <div class="h-12 w-1 bg-primary my-2 hidden md:block"></div>
+            <h3 class="text-xl font-bold text-center mb-2">Monitoring</h3>
+            <p class="text-gray-600 text-center">
+              We continuously track performance and make data-driven optimizations.
+            </p>
+          </div>
+
+          <!-- Step 5 -->
+          <div
+            class="w-full md:w-1/5 px-4 mb-12 flex flex-col items-center transition-all duration-300 hover:scale-110 transform"
+          >
+            <div
+              class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4 shadow-lg"
+            >
+              <span class="text-white text-2xl font-bold">5</span>
+            </div>
+            <div class="h-12 w-1 bg-primary my-2 hidden md:block"></div>
+            <h3 class="text-xl font-bold text-center mb-2">Results</h3>
+            <p class="text-gray-600 text-center">
+              We deliver transparent reporting and continually refine our approach for maximum
+              impact.
+            </p>
+          </div>
+        </div>
+
+        <div class="text-center mt-8">
+          <a
+            href="#github-profile"
+            class="inline-block bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105"
+          >
+            Start Your Project
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">Our Pricing Plans</h2>
+        <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
+          Choose the perfect plan for your business needs. All plans include our core digital
+          marketing features.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Basic Plan -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:translate-y-[-8px] transform"
+          >
+            <div class="p-8 bg-secondary">
+              <h3 class="text-xl font-bold text-white text-center">Basic</h3>
+              <div class="mt-4 text-center">
+                <span class="text-white text-4xl font-bold">$499</span>
+                <span class="text-white opacity-70">/month</span>
+              </div>
+            </div>
+            <div class="p-8">
+              <ul class="space-y-4">
+                <li class="flex items-center">
+                  <i class="fa-solid fa-share text-primary mr-2"></i>
+                  Social Media Management
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-search text-primary mr-2"></i>
+                  Basic SEO Optimization
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-chart-line text-primary mr-2"></i>
+                  Monthly Performance Report
+                </li>
+                <li class="flex items-center text-gray-500">
+                  <i class="fa-solid fa-chart-bar text-gray-400 mr-2"></i>
+                  Advanced Analytics
+                </li>
+                <li class="flex items-center text-gray-500">
+                  <i class="fa-solid fa-user text-gray-400 mr-2"></i>
+                  Dedicated Account Manager
+                </li>
+              </ul>
+              <div class="mt-8">
+                <a
+                  href="#github-profile"
+                  class="block w-full bg-primary hover:bg-primary-dark text-white text-center font-semibold py-3 rounded-md transition"
+                >
+                  Get Started
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Standard Plan (Featured) -->
+          <div
+            class="bg-white rounded-lg shadow-xl transform md:scale-105 overflow-hidden relative transition-all duration-300 hover:shadow-2xl hover:translate-y-[-8px]"
+          >
+            <div class="absolute top-0 right-0">
+              <div class="bg-primary text-white text-xs font-bold py-1 px-3 rounded-bl">
+                POPULAR
+              </div>
+            </div>
+            <div class="p-8 bg-primary">
+              <h3 class="text-xl font-bold text-white text-center">Standard</h3>
+              <div class="mt-4 text-center">
+                <span class="text-white text-4xl font-bold">$899</span>
+                <span class="text-white opacity-70">/month</span>
+              </div>
+            </div>
+            <div class="p-8">
+              <ul class="space-y-4">
+                <li class="flex items-center">
+                  <i class="fa-solid fa-share text-primary mr-2"></i>
+                  Social Media Management
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-search text-primary mr-2"></i>
+                  Complete SEO Optimization
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-chart-line text-primary mr-2"></i>
+                  Bi-Weekly Performance Report
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-chart-bar text-primary mr-2"></i>
+                  Advanced Analytics
+                </li>
+                <li class="flex items-center text-gray-500">
+                  <i class="fa-solid fa-user text-gray-400 mr-2"></i>
+                  Dedicated Account Manager
+                </li>
+              </ul>
+              <div class="mt-8">
+                <a
+                  href="#github-profile"
+                  class="block w-full bg-primary hover:bg-primary-dark text-white text-center font-semibold py-3 rounded-md transition"
+                >
+                  Get Started
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Premium Plan -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:translate-y-[-8px] transform"
+          >
+            <div class="p-8 bg-secondary">
+              <h3 class="text-xl font-bold text-white text-center">Premium</h3>
+              <div class="mt-4 text-center">
+                <span class="text-white text-4xl font-bold">$1499</span>
+                <span class="text-white opacity-70">/month</span>
+              </div>
+            </div>
+            <div class="p-8">
+              <ul class="space-y-4">
+                <li class="flex items-center">
+                  <i class="fa-solid fa-share text-primary mr-2"></i>
+                  Social Media Management
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-search text-primary mr-2"></i>
+                  Premium SEO Optimization
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-chart-line text-primary mr-2"></i>
+                  Weekly Performance Report
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-chart-bar text-primary mr-2"></i>
+                  Advanced Analytics
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-user text-primary mr-2"></i>
+                  Dedicated Account Manager
+                </li>
+              </ul>
+              <div class="mt-8">
+                <a
+                  href="#github-profile"
+                  class="block w-full bg-primary hover:bg-primary-dark text-white text-center font-semibold py-3 rounded-md transition"
+                >
+                  Get Started
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section id="our-team" class="py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">Meet Our Team</h2>
+        <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
+          Our talented professionals are passionate about helping businesses succeed in the digital
+          landscape.
+        </p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Team Member 1 - Abstract/Professional Image -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 transform"
+          >
+            <div
+              class="bg-gradient-to-r from-primary to-secondary h-64 flex items-center justify-center p-6"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-24 w-24 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-1">Mohammad Rahman</h3>
+              <p class="text-primary mb-3">Chief Marketing Officer</p>
+              <p class="text-gray-600">
+                Over 10 years of experience in digital marketing strategy and brand development.
+              </p>
+            </div>
+          </div>
+
+          <!-- Team Member 2 - Abstract/Professional Image -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 transform"
+          >
+            <div
+              class="bg-gradient-to-r from-secondary to-primary h-64 flex items-center justify-center p-6"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-24 w-24 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-1">Abdullah Karim</h3>
+              <p class="text-primary mb-3">SEO Specialist</p>
+              <p class="text-gray-600">
+                Expert in search engine optimization with a focus on sustainable growth strategies.
+              </p>
+            </div>
+          </div>
+
+          <!-- Team Member 3 - Abstract/Professional Image -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 transform"
+          >
+            <div
+              class="bg-gradient-to-r from-primary-light to-primary h-64 flex items-center justify-center p-6"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-24 w-24 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
+                />
+              </svg>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-1">Nusrat Jahan</h3>
+              <p class="text-primary mb-3">Social Media Manager</p>
+              <p class="text-gray-600">
+                Creates engaging content strategies that drive audience engagement and brand
+                loyalty.
+              </p>
+            </div>
+          </div>
+
+          <!-- Team Member 4 - Abstract/Professional Image -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 transform"
+          >
+            <div
+              class="bg-gradient-to-r from-secondary-dark to-secondary h-64 flex items-center justify-center p-6"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-24 w-24 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                />
+              </svg>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-1">Farhan Ahmed</h3>
+              <p class="text-primary mb-3">Data Analyst</p>
+              <p class="text-gray-600">
+                Transforms complex data into actionable insights that drive marketing performance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GitHub Profile Section -->
+    <section id="github-profile" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6 text-gray-800">Check Out My GitHub</h2>
+        <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+          Explore my open-source projects and contributions. I'm passionate about creating clean,
+          efficient code and collaborating with other developers.
+        </p>
+        <div class="flex justify-center">
+          <a
+            href="https://github.com/al-shaimon"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center bg-gray-800 hover:bg-black text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg transform hover:scale-105"
+          >
+            <i class="fa-brands fa-github text-xl mr-2"></i>
+            View My GitHub Profile
+          </a>
+        </div>
+        <div
+          class="mt-8 bg-white p-8 rounded-xl max-w-2xl mx-auto transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform"
+        >
+          <div class="flex items-center justify-center mb-4">
+            <img
+              src="https://github.com/al-shaimon.png"
+              alt="Abdullah Al Shaimon"
+              class="w-20 h-20 rounded-full mr-4"
+            />
+            <div class="text-left">
+              <h3 class="text-xl font-bold">Abdullah Al Shaimon</h3>
+              <p class="text-gray-600">Web Developer</p>
+            </div>
+          </div>
+          <p class="text-gray-700 mb-6">
+            A passionate web developer experienced in creating responsive and dynamic user
+            interfaces using React, Next.js, Node.js and more.
+          </p>
+          <div class="flex justify-center flex-wrap gap-6">
+            <div class="flex flex-col items-center">
+              <i class="devicon-react-original colored text-4xl"></i>
+              <span class="text-xs mt-1">React</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <i class="devicon-nextjs-original text-4xl"></i>
+              <span class="text-xs mt-1">Next.js</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <i class="devicon-nodejs-plain colored text-4xl"></i>
+              <span class="text-xs mt-1">Node.js</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <i class="devicon-tailwindcss-plain colored text-4xl"></i>
+              <span class="text-xs mt-1">Tailwind</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <i class="devicon-javascript-plain colored text-4xl"></i>
+              <span class="text-xs mt-1">JavaScript</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <i class="devicon-typescript-plain colored text-4xl"></i>
+              <span class="text-xs mt-1">TypeScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Add Footer Section -->
+    <footer class="bg-secondary text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <div class="flex items-center mb-4">
+              <i class="fa-solid fa-bolt text-primary-light text-2xl"></i>
+              <span class="ml-2 font-bold text-xl">SPARK DIGITAL</span>
+            </div>
+            <p class="text-gray-400">
+              Innovative digital marketing solutions for businesses of all sizes.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Services</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-primary-light transition"
+                  >Content Strategy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-primary-light transition"
+                  >Social Media</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-primary-light transition"
+                  >SEO Optimization</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-primary-light transition"
+                  >PPC Advertising</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Company</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-primary-light transition">About Us</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-primary-light transition">Careers</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-primary-light transition"
+                  >Case Studies</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-primary-light transition">Blog</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Connect With Me</h4>
+            <ul class="space-y-2">
+              <li class="text-white hover:text-primary-light transition cursor-default">
+                Bahaddarhat, Chattogram
+              </li>
+              <li>
+                <a
+                  href="mailto:alshaimon152@gmail.com"
+                  class="text-white hover:text-primary-light transition"
+                  >alshaimon152@gmail.com</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/+8801690174668"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-white hover:text-primary-light transition"
+                  >+880 1690-174668</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between">
+          <p class="text-gray-400">
+            &copy; <span id="current-year"></span> Spark Digital. All rights reserved.
+          </p>
+          <div class="flex space-x-4 mt-4 md:mt-0">
+            <a
+              href="https://www.facebook.com/al.shaimon"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-400 hover:text-primary-light transition"
+            >
+              <i class="fa-brands fa-facebook-f text-xl"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/al-shaimon/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-400 hover:text-primary-light transition"
+            >
+              <i class="fa-brands fa-linkedin-in text-xl"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/alshaimon"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-400 hover:text-primary-light transition"
+            >
+              <i class="fa-brands fa-instagram text-xl"></i>
+            </a>
+            <a
+              href="https://github.com/al-shaimon"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-400 hover:text-primary-light transition"
+            >
+              <i class="fa-brands fa-github text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Simple JavaScript for Mobile Menu and Banner Slider -->
+    <script>
+      // Mobile Menu Toggle
+      document.getElementById('mobile-menu-button').addEventListener('click', function () {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Simple Banner Slider
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('.banner-slide');
+      const dots = document.querySelectorAll('#banner-dots button');
+
+      // Function to show a specific slide
+      function showSlide(index) {
+        // Hide all slides
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].classList.add('hidden');
+          dots[i].classList.remove('bg-primary');
+          dots[i].classList.add('bg-white/50');
+        }
+
+        // Show the current slide
+        slides[index].classList.remove('hidden');
+        dots[index].classList.remove('bg-white/50');
+        dots[index].classList.add('bg-primary');
+
+        currentSlide = index;
+      }
+
+      // Set up navigation
+      document.getElementById('next-btn').addEventListener('click', function () {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      });
+
+      document.getElementById('prev-btn').addEventListener('click', function () {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+      });
+
+      // Auto-slide every 5 seconds
+      setInterval(function () {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }, 5000);
+
+      // Set the current year dynamically
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
